@@ -6,7 +6,7 @@ const PageExperience = () => {
   return (
     <main className="border-b border-gray-500/30">
       <Container>
-        <Title title="Experience" />
+        <Title title="Experiencia" />
       </Container>
       <hr className="border-gray-500/30" />
       <Container className="py-10">

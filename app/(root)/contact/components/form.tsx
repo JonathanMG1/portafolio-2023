@@ -50,16 +50,17 @@ const Form = () => {
         'wEsQPymKBGvhm4XUt'
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setSucessMessage(true);
 
           // Resetear el formulario después de unos segundos
+          if (formRef.current) {
+            formRef.current.reset();
+          }
+
+          //Ocultar el mensaje de exito despues de 3s
           setTimeout(() => {
             setSucessMessage(false);
-            if (formRef.current) {
-              formRef.current.reset();
-            }
           }, 3000);
         },
         (error) => {
